@@ -3,7 +3,6 @@ language: python
 python: "2.7"
 
 before_install:
-  # Make sure everything's up to date.
   - sudo apt-get update -qq
 
 install:
@@ -11,4 +10,4 @@ install:
 
 script:
   - ansible-playbook -i tests/localhost, tests/test.yml --syntax-check
-  - ansible-playbook -i tests/localhost, tests/test.yml
+  - ansible-playbook -i tests/localhost, tests/test.yml --connection=local --sudo
