@@ -9,6 +9,6 @@ install:
   - pip install -I ansible==2.0.2.0
 
 script:
-  - ansible-playbook -v -i tests/localhost, tests/test.yml --syntax-check
-  - ansible-playbook -v -i tests/localhost, tests/test.yml --connection=local --sudo
-  - ansible-playbook -v -i tests/localhost, tests/test.yml --connection=local --sudo # check for idempotency
+  - ansible-playbook -i tests/localhost, tests/test.yml --syntax-check
+  - ansible-playbook -i tests/localhost, tests/test.yml --connection=local --sudo
+  - ansible-playbook -i tests/localhost, tests/test.yml --connection=local --sudo # check for idempotency
